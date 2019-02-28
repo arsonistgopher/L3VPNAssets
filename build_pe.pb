@@ -1,8 +1,7 @@
 ---
    - name: "Create configurations for 'pe1' and 'pe2'"
      hosts:
-       - pe1
-       - pe2
+       - "{{ target }}"
      roles:
        - Juniper.junos
      connection: local
