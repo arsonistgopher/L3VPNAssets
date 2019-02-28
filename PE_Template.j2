@@ -1,0 +1,21 @@
+interfaces {
+    {{ PEPORT }} {
+        mtu 1500;
+        unit 0 {
+            description "{{ CUIDSID }}";
+            family inet {
+                address {{ PEADDRESS }};
+            }
+        }
+    }
+}
+routing-instances {
+    {{ CUIDSID }} {
+        instance-type vrf;
+        interface {{ PEPORT }};
+        interface lo0.{{ LO0UNIT }};
+        route-distinguisher {{ RT }};
+        vrf-target {{ RD }};
+        vrf-table-label;
+    }
+}
