@@ -2,5 +2,5 @@
 # lab inventory
 ##############################################
 
-pe1	junos_host=pe1.ipengineer.net
+pe1	    junos_host=pe1.ipengineer.net
 pe2     junos_host=pe2.ipengineer.net

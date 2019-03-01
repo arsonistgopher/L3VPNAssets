@@ -15,7 +15,7 @@
           dest: "{{ playbook_dir }}/{{ inventory_hostname }}.conf"
 
 
-      - name: Load override from a file.
+      - name: Load merge from a file.
         juniper_junos_config:
           provider: "{{ provider_info }}"
           load: 'merge'
